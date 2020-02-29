@@ -1,0 +1,628 @@
+/*ESTILO PAGINA MARVEL*/
+
+body{background-image: url(../imagenes/sagafondo1.jpg);
+    }
+
+#wrapper {width:90%;       /* todo el layout ocupa un 90% */
+  margin:0 auto;}  /* está centrado */
+
+@media only screen and (max-width:550px){
+#wrapper {width:100%}
+}
+
+@font-face {font-family: miserif;
+    src:url("../fuentes/modern_sans_serif_7.ttf");
+     }
+
+/****** topnav responsive with dropdown ******/
+nav {position:sticky;
+top:0;
+z-index:99;}
+
+.topnav {
+overflow: hidden;
+background-color: #262B7C;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.active {
+background-color:red;
+color: white;
+}
+
+.topnav .icon {
+display: none;
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+font-size: 17px;    
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+background-color: #555;
+color: white;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child), .dropdown .dropbtn {
+display: none;
+}
+.topnav a.icon {
+float: right;
+display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+position: absolute;
+right: 0;
+top: 0;
+}
+.topnav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {position: relative;}
+.topnav.responsive .dropdown .dropbtn {
+display: block;
+width: 100%;
+text-align: left;
+}
+}
+
+
+
+/***** hero section (header) ********/
+
+header {position:relative;
+background-image: url("../imagenes/vengadores3.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+height:100vh;}  /* ocupa el alto completo de la pantalla */
+
+.texto-hero {font-family:miserif;
+     color:white;
+     font-size:150%;
+     position:absolute;
+     top:50%;
+     left:5%;
+     }
+.texto-hero a {color:white;
+       padding:5px;
+       border-radius:5px;
+       background-color:#262B7C;
+       text-decoration:none;
+       }
+.texto-hero h3{border-radius:5px;
+background-color:#262B7C;
+text-decoration:none}
+
+.texto-hero a:hover {background-color: rgba(255, 255, 255, 0.5);}
+
+/********* SECTION EN GENERAL **************/
+
+section * {box-sizing:border-box;
+   }
+
+.titulo-seccion { text-align:center;
+          width:40%;
+          padding:5%;
+          margin:4% auto;
+          border-top: 3px solid #262B7C;
+          border-bottom: 3px solid #262B7C;
+          border-left: 3px solid #262B7C;
+          border-right: 3px solid #262B7C;
+          background-color: rgb(40, 45, 134,0.5);
+          color:white}
+.final {clear:both;}  /* esto es para romper el float left al final ***/
+
+/************ MAQUETADO EN MITADES ***********/
+.mitad {width:50%;
+padding:5%;
+text-align:justify;
+float:left;}
+#izda {background-color:rgba(27, 31, 117, 0.5);
+        border-left: solid #262B7C;
+        border: solid #262B7C;
+        color:white}
+#dcha {background-color:rgba(27, 31, 117, 0.5);
+        border-left: solid #262B7C;
+        border: solid #262B7C;
+        color: white;}
+
+
+@media screen and (max-width:800px){
+.mitad {width:100%;}
+}
+
+/************* ESTÁ MAQUETADA EN TERCIOS *******/
+
+
+
+.tercios {width:33.33%;
+  padding:5%;
+  text-align:center;
+  float: left;
+  border: solid #262B7C;
+  }
+
+#tres-uno, #tres-dos, #tres-tres {background-color: rgb(41, 46, 139,0.5);
+               color:white;}
+
+@media only screen and (max-width:800px){
+.tercios {width:100%;}
+}
+/******* ESTILO DE GALERIA **********/
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 20%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+background-color: #262B7C;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* Container for image text */
+
+.caption-container {
+
+text-align: center;
+background-color:#262B7C ;
+padding: 2px 16px;
+color: white;
+font-size: larger;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Six columns side by side */
+.column {
+float: left;
+width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+opacity: 1;
+}
+
+
+/******************************** ESTILO PERSONAJES***********/
+
+#persons{text-align:center;
+          width:30%;
+          padding:2%;
+          margin:2% auto;
+          border-top: 3px solid #262B7C;
+          border-bottom: 3px solid #262B7C;
+          border-left: 3px solid #262B7C;
+          border-right: 3px solid #262B7C;
+          background-color: rgb(40, 45, 134,0.5);
+          color:white
+  }
+
+@import "lesshat";
+
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.ba-slider img {
+    width: 100%;
+    display:inline-block;
+}
+.resize {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.handle { /* Thin line seperator */
+  position:absolute; 
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  margin-left:-2px;
+ 
+  background: rgba(0,0,0,.5);
+  cursor: ew-resize;
+}
+ 
+.handle:after {  /* Big orange knob  */
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+ 
+    content:'\21d4';
+    color:white;
+    font-weight:bold;
+    font-size:36px;
+    text-align:center;
+    line-height:64px;
+ 
+    background: #262B7C; 
+    border:1px solid #262B7C; 
+    border-radius: 50%;
+    transition:all 0.3s ease;
+    box-shadow:
+      0 2px 6px rgba(0,0,0,.3), 
+      inset 0 2px 0 rgba(255,255,255,.5),
+      inset 0 60px 50px -30px #262B7C; /* lighten(@orange, 20%)*/ 
+}
+
+.draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height:48px;
+    font-size:30px;
+}
+
+
+/******** PREGUNTAS FRECUENTES (ACCORDION DE W3SCHOOL) *****/
+.accordion {
+background-color: #262B7C;
+color: white;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+transition: 0.4s;
+}
+
+.active, .accordion:hover {
+background-color: #555; 
+}
+button.accordion:after {
+content: '\002B';
+color: #777;
+font-weight: bold;
+float: right;
+margin-left: 5px;
+}
+
+button.accordion.active:after {
+content: "\2212";
+}
+
+.panel {
+padding: 0 18px;
+display: none;
+background-color: rgb(55, 63, 202,1);
+color: white;
+overflow: hidden;
+}
+
+.panel img {float:left;
+    margin:20px;}
+
+/******** MAPA Y CONTACTO ********/
+#mapa {background-color: rgb(44, 49, 148,0.5);
+padding:2%;
+text-align: center;
+color:white}
+#mimapa {display:block;
+ margin:10% auto;}
+#info{background-color: rgb(43, 48, 145,0.5);
+      color: white;
+      padding: 4%;}
+dl {margin-top:0;
+    font-weight: bold;
+    font-size: 120%;}
+dt {font-weight:bold;
+font-size:150%;
+margin-bottom:1%;}
+
+/****************** PARALLAX SOY IRON MAN ***********/
+.ironman {
+/* The image used */
+background-image: url("../imagenes/ironheader.jpg");
+
+/* Full height */
+height: 30%;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 800px) {
+.ironman {
+background-attachment: scroll;
+}
+}
+
+section#ironman{text-align: center;
+                padding:10%;}
+
+.ironman h2{color:white;
+  border-radius:5px;
+  background-color:#262B7C;
+  text-decoration:none;
+  display:inline-block;}
+
+
+/****************** PARALLAX CORAZON **************/
+.capitan {
+  /* The image used */
+  background-image: url("../imagenes/corazon.png");
+  
+  /* Full height */
+  height: 30%;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 800px) {
+  .capitan {
+  background-attachment: scroll;
+  }
+  }
+  
+  section#capitan{padding:10%;
+                  text-align: center;
+                   }
+.capitan h2{color:white;
+  border-radius:5px;
+  background-color:#262B7C;
+  text-decoration:none;
+  display:inline-block;}
+
+/***************** PARALLAX THANOS ****************/
+
+.thanos {
+  /* The image used */
+  background-image: url("../imagenes/thanos.jpg");
+  
+  /* Full height */
+  height: 30%;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 800px) {
+  .thanos {
+  background-attachment: scroll;
+  }
+  }
+  
+  section#thanos{padding:10%;
+                  text-align: center;}
+
+  .thanos h2{color:white;
+  border-radius:5px;
+  background-color:#262B7C;
+  text-decoration:none;
+  display:inline-block;}
+
+/**************** PARALLAX VENGADORES REUNIOS ************/
+.reunios {
+  /* The image used */
+  background-image: url("../imagenes/assemble.gif");
+  
+  /* Full height */
+  height: 30%;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 800px) {
+  .reunios {
+  background-attachment: scroll;
+  }
+  }
+  
+  section#reunios{padding:10%;
+                  text-align: center;}
+
+.reunios h2{color:white;
+  border-radius:5px;
+  background-color:#262B7C;
+  text-decoration:none;
+  display:inline-block;}
+
+/********************** PARALLAX CIVIL WAR ***************/
+.civil {
+  /* The image used */
+  background-image: url("../imagenes/parallax2.jpg");
+  
+  /* Full height */
+  height: 30%;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 800px) {
+  .civil {
+  background-attachment: scroll;
+  }
+  }
+  
+  section#civil{padding:10%;
+                  text-align: center;}
+.civil h2{color:white;
+  border-radius:5px;
+  background-color:#262B7C;
+  text-decoration:none;
+  display:inline-block;}
+
+/****************** PARALLAX GUARDIANES ******************/
+.galaxia {
+  /* The image used */
+  background-image: url("../imagenes/galaxia.jpg");
+  
+  /* Full height */
+  height: 30%;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 800px) {
+  .galaxia {
+  background-attachment: scroll;
+  }
+  }
+  
+  section#galaxia{padding:10%;
+                  text-align: center;}
+
+.galaxia h2{color:white;
+  border-radius:5px;
+  background-color:#262B7C;
+  text-decoration:none;
+  display:inline-block;}
+
+/**************** FOOTER **********************/
+
+footer{background-color: #262B7C;
+  padding: 20px;}
+footer p{text-align: center;
+  margin:0;
+  color: white;
+  font-size: 0.8em;}
