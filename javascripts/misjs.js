@@ -69,7 +69,7 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-/*******JAVASCRIPT SEGUNDA GALERIA IMAGENES */
+/*******JAVASCRIPT GALERIA PERSONAJES */
 
 // Call & init
 $(document).ready(function(){
